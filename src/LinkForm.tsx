@@ -174,7 +174,7 @@ export const LinkForm = (props: Props) => {
                 return (
                   <React.Fragment key={sideIndex}>
                     <InlineFieldRow className={styles.row}>
-                      <InlineField label={`${sName} Side`} labelWidth={'auto'} style={{ maxWidth: '100%' }}>
+                      <InlineField label={`${sName} Side`} labelWidth={'auto'} style={{ maxWidth: '50%' }}>
                         <Select
                           onChange={(v) => {
                             handleNodeChange(v as unknown as Node, sName, i);
@@ -188,7 +188,7 @@ export const LinkForm = (props: Props) => {
                           defaultValue={link.nodes[sideIndex]}
                         ></Select>
                       </InlineField>
-                      <InlineField label={`${sName} Side Query`} labelWidth={'auto'} style={{ maxWidth: '100%' }}>
+                      <InlineField label={`${sName} Side Query`} labelWidth={'auto'} style={{ maxWidth: '50%' }}>
                         <Select
                           onChange={(v) => {
                             handleDataChange(sName, i, v.name);
@@ -312,28 +312,25 @@ const getStyles = stylesFactory(() => {
       margin: 0px 0px;
     `,
     addNew: css`
-      width: calc(50% - 10px);
       justify-content: center;
       margin: 10px 0px;
       margin-right: 5px;
-    `,
+    `, //width: calc(50% - 10px);
     clearAll: css`
-      width: calc(50% - 10px);
       justify-content: center;
       margin: 10px 0px;
       margin-left: 5px;
-    `,
+    `,//width: calc(50% - 10px);
     nodeSelect: css`
       margin: 0px 0px;
     `,
     bandwidthSelect: css`
       margin: 0px 0px;
-      max-width: calc(100% - 112px);
-    `,
+    `, //max-width: calc(100% - 112px); doesn't display right in grafana 9
     querySelect: css`
       margin: 0px 0px;
-      max-width: calc(100% - 88px);
-    `, // TODO: find a better way to do this calc above
+    `, //max-width: calc(100% - 88px); doesn;t display correct in grafana 9
+    // TODO: find a better way to do this calc above
     row: css`
       margin-top: 5px;
       max-width: 100%;
