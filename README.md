@@ -12,5 +12,11 @@ If you really do build something large and want to ensure it is easier to port o
 
 **If you would like to simply test the plugin to play around in a separate environment, please clone this repo and then follow the directions in the [testing README](https://github.com/knightss27/grafana-network-weathermap/tree/main/testing#readme).**
 
+## Tested datasources
+
+* prometheus
+* influxdb
+* timescaledb postgres
+
 Example layout:
 ![Example Image](https://raw.githubusercontent.com/knightss27/grafana-network-weathermap/main/src/img/general-example.svg)
