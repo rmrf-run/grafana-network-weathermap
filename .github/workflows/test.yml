@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'src/**'
+      - 'package-lock.json'
+      - '.github/**'
   pull_request:
 
 jobs:
