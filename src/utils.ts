@@ -280,11 +280,11 @@ export function handleVersionedStateUpdates(wm: Weathermap, theme: GrafanaTheme2
           guidesEnabled: false,
         },
       },
-    },
-    tooltip: {
-      fontSize: 8,
-      textColor: 'white',
-      backgroundColor: 'black',
+      tooltip: {
+        fontSize: 8,
+        textColor: 'white',
+        backgroundColor: 'black',
+      },
     },
   };
 
